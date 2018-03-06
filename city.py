@@ -1,0 +1,1 @@
+def get(name):    f = open("city.txt",'r')    result={}    for c in f.readlines():        if c=='':            continue        c_array = c.split("=")        result[c_array[0]]=c_array[1].replace('\n','')    for num in result.keys():        if name==result[num]:            return(num)if __name__ == "__main__":    print(get('上海'))
